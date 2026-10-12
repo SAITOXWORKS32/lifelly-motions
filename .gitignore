@@ -1,0 +1,12 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.exe
+*.spec
+build/
+dist/
+.venv/
+.vscode/
+*.log
