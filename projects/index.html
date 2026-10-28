@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Biblioteca de ícones SVG (traço cinza, herdam a cor do texto) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-files" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/><path d="M12 21a2 2 0 0 1 0-4h2a2 2 0 0 0 0-4"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><circle cx="12" cy="17.5" r=".6"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 5h16M7 12h10M10 19h4"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M4 20h16"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-folder-plus" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM12 10v6M9 13h6"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-split" viewBox="0 0 24 24"><path d="M12 20v-5M12 15 6 9M12 15l6-6M6 9V4M18 9V4"/></symbol>
+  <symbol id="i-square" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M6 5v14l9-7zM17 5h2v14h-2z"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M18 5v14l-9-7zM5 5h2v14H5z"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 5 6M22 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-maximize" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-minimize" viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></symbol>
+  <symbol id="i-game" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15 12h.01M17.5 13.5h.01"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></symbol>
+</svg>
+
+<div class="app">
+
+  <!-- ===== COMPONENTE: Sidebar ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="user" id="user-box">
+      <div class="avatar" id="user-avatar"></div>
+      <div>
+        <div class="user-name" id="user-name"></div>
+        <div class="user-mail" id="user-mail"></div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-item" href="#" data-nav="home"><svg class="ic"><use href="#i-home"/></svg>Home</a>
+      <a class="nav-item" href="#" data-nav="my-projects"><svg class="ic"><use href="#i-star"/></svg>My projects</a>
+    </nav>
+
+    <div class="nav">
+      <a class="nav-item is-active" href="#" data-nav="projects"><svg class="ic"><use href="#i-folder"/></svg>Projects</a>
+      <div class="sub">
+        <button class="sub-item" data-filter="all">View all <span class="badge" data-count="all">0</span></button>
+        <button class="sub-item" data-filter="recent">Recent <span class="badge" data-count="recent">0</span></button>
+        <button class="sub-item" data-filter="favorites">Favorites <span class="badge" data-count="favorites">0</span></button>
+        <button class="sub-item" data-filter="shared">Shared <span class="badge" data-count="shared">0</span></button>
+        <button class="sub-item" data-filter="archived">Archived <span class="badge" data-count="archived">0</span></button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <nav class="nav">
+      <a class="nav-item" href="#" data-nav="all-files"><svg class="ic"><use href="#i-files"/></svg>All files</a>
+      <a class="nav-item" href="#" data-nav="team"><svg class="ic"><use href="#i-users"/></svg>Team members</a>
+      <a class="nav-item" href="#" data-nav="appearance"><svg class="ic"><use href="#i-palette"/></svg>Appearance</a>
+    </nav>
+
+    <div class="divider"></div>
+
+    <nav class="nav sidebar-bottom">
+      <a class="nav-item" href="#" data-nav="open-browser"><svg class="ic"><use href="#i-external"/></svg>Open in browser</a>
+      <a class="nav-item" href="#" data-nav="support"><svg class="ic"><use href="#i-help"/></svg>Support</a>
+      <a class="nav-item" href="#" data-nav="settings"><svg class="ic"><use href="#i-settings"/></svg>Settings</a>
+    </nav>
+
+    <div class="brand"><span id="brand-name"></span><span id="brand-version"></span></div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ===== COMPONENTE: Header ===== -->
+    <header class="header">
+      <h1 class="title" id="page-title"></h1>
+      <div class="header-actions">
+        <button class="btn-ghost" id="btn-import"><svg class="ic ic-sm"><use href="#i-upload"/></svg><span>Importar pasta</span></button>
+        <button class="btn-primary" id="btn-new-project"><svg class="ic ic-sm"><use href="#i-plus"/></svg>New project</button>
+      </div>
+    </header>
+
+    <!-- ===== COMPONENTE: Projetos recentes ===== -->
+    <section class="block">
+      <div class="section-label" id="recent-label"></div>
+      <div class="recent" id="recent-grid"></div>
+    </section>
+
+    <!-- ===== COMPONENTE: Tabs e busca ===== -->
+    <section class="block grow">
+      <div class="section-label" id="list-label"></div>
+
+      <div class="toolbar">
+        <div class="tabs" role="tablist">
+          <button class="tab is-active" role="tab" data-tab="all"><svg class="ic ic-sm"><use href="#i-grid"/></svg><span></span></button>
+          <button class="tab" role="tab" data-tab="recent"><svg class="ic ic-sm"><use href="#i-clock"/></svg><span></span></button>
+          <button class="tab" role="tab" data-tab="favorites"><svg class="ic ic-sm"><use href="#i-star"/></svg><span></span></button>
+          <button class="tab" role="tab" data-tab="shared"><svg class="ic ic-sm"><use href="#i-share"/></svg><span></span></button>
+          <button class="tab" role="tab" data-tab="archived"><svg class="ic ic-sm"><use href="#i-archive"/></svg><span></span></button>
+        </div>
+        <div class="search-wrap">
+          <label class="search">
+            <svg class="ic ic-sm"><use href="#i-search"/></svg>
+            <input type="text" id="search-input" aria-label="Buscar projetos">
+          </label>
+          <button class="btn-ghost" id="btn-filters"><svg class="ic ic-sm"><use href="#i-filter"/></svg><span></span></button>
+        </div>
+      </div>
+
+      <!-- ===== COMPONENTE: Lista de projetos / Estado vazio ===== -->
+      <div class="list" id="list-area">
+        <div class="empty" id="empty-state" hidden>
+          <div class="folder"><svg class="ic ic-sm"><use href="#i-x"/></svg></div>
+          <h3 id="empty-title"></h3>
+          <p id="empty-text"></p>
+          <div class="actions">
+            <button class="btn-ghost" id="btn-clear-search"><svg class="ic ic-sm"><use href="#i-x"/></svg><span></span></button>
+            <button class="btn-primary" id="btn-new-project-empty"><svg class="ic ic-sm"><use href="#i-plus"/></svg><span></span></button>
+          </div>
+        </div>
+        <div class="project-list" id="project-list"></div>
+      </div>
+    </section>
+
+  </main>
+
+<!-- ===== TELA: Projeto (árvore de arquivos) ===== -->
+<section class="screen" id="screen-project" hidden>
+  <header class="screen-head">
+    <button class="btn-ghost" id="btn-back"><svg class="ic ic-sm"><use href="#i-back"/></svg><span>Voltar</span></button>
+    <div class="screen-title"><h2 id="proj-name"></h2><small id="proj-meta"></small></div>
+    <div class="screen-actions">
+      <button class="btn-ghost" id="btn-new-folder"><svg class="ic ic-sm"><use href="#i-folder-plus"/></svg><span>Nova pasta</span></button>
+      <button class="btn-ghost" id="btn-import-into"><svg class="ic ic-sm"><use href="#i-upload"/></svg><span>Importar pasta</span></button>
+      <button class="btn-primary" id="btn-export"><svg class="ic ic-sm"><use href="#i-download"/></svg><span>Exportar</span></button>
+    </div>
+  </header>
+  <div class="tree-tools" id="tree-tools">
+    <div class="tools-row">
+      <label class="search tree-search">
+        <svg class="ic ic-sm"><use href="#i-search"/></svg>
+        <input type="text" id="tree-search" placeholder="Pesquisar nesta pasta" aria-label="Pesquisar nesta pasta">
+      </label>
+      <div class="type-chips" id="type-chips" role="group" aria-label="Tipo de arquivo">
+        <button class="chip-f is-on" data-type="all">Todos</button>
+        <button class="chip-f" data-type="image">Imagens</button>
+        <button class="chip-f" data-type="video">Vídeos</button>
+        <button class="chip-f" data-type="other">Outros</button>
+      </div>
+      <button class="btn-ghost" id="btn-select" aria-pressed="false"><svg class="ic ic-sm"><use href="#i-square"/></svg><span>Selecionar</span></button>
+    </div>
+    <div class="cat-row">
+      <span class="cat-label">Categorias</span>
+      <div class="cat-chips" id="cat-chips"></div>
+    </div>
+  </div>
+
+  <div class="sel-bar" id="sel-bar" hidden>
+    <span class="sel-count" id="sel-count"></span>
+    <div class="sel-actions">
+      <button class="btn-ghost" data-sel="selectVisible"><span>Selecionar visíveis</span></button>
+      <button class="btn-ghost" data-sel="group" data-sel-needs><svg class="ic ic-sm"><use href="#i-layers"/></svg><span>Agrupar</span></button>
+      <button class="btn-ghost" id="sel-cat" data-sel="cat" data-sel-needs><svg class="ic ic-sm"><use href="#i-tag"/></svg><span>Categoria</span></button>
+      <button class="btn-ghost" data-sel="export" data-sel-needs><svg class="ic ic-sm"><use href="#i-download"/></svg><span>Exportar</span></button>
+      <button class="btn-ghost danger-txt" data-sel="delete" data-sel-needs><svg class="ic ic-sm"><use href="#i-trash"/></svg><span>Excluir</span></button>
+      <button class="btn-ghost" data-sel="exit"><span>Concluir</span></button>
+    </div>
+  </div>
+
+  <div class="tree" id="tree"></div>
+  <div class="empty" id="tree-empty" hidden><p>Este projeto ainda não tem arquivos.</p></div>
+</section>
+
+<!-- ===== TELA: Importar pasta ===== -->
+<section class="screen" id="screen-import" hidden>
+  <header class="screen-head">
+    <button class="btn-ghost" id="btn-import-back"><svg class="ic ic-sm"><use href="#i-back"/></svg><span>Voltar</span></button>
+    <div class="screen-title"><h2>Importar pasta</h2><small>Escolha uma pasta do seu computador. Nada é enviado até você confirmar.</small></div>
+  </header>
+  <input type="file" id="folder-input" webkitdirectory multiple hidden>
+  <button class="drop" id="btn-pick"><svg class="ic"><use href="#i-upload"/></svg><span>Escolher pasta</span></button>
+  <div class="import-stats" id="import-stats"></div>
+  <p class="import-note" id="import-note"></p>
+  <div class="tree" id="import-tree"></div>
+  <div class="screen-foot">
+    <button class="btn-ghost" id="btn-import-cancel"><span>Cancelar</span></button>
+    <button class="btn-primary" id="btn-import-go" disabled><span>Importar projeto</span></button>
+  </div>
+</section>
+
+<!-- ===== Visualizador de imagens ===== -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Anterior"><svg class="ic"><use href="#i-back"/></svg></button>
+  <figure class="lb-fig"><img id="lb-img" alt=""><video id="lb-video" controls hidden></video><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Próxima"><svg class="ic"><use href="#i-chev-right"/></svg></button>
+</div>
+
+<!-- ===== Exportação ===== -->
+<div class="modal" id="export-modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="ex-title">
+    <header class="modal-head">
+      <h3 id="ex-title">Exportar</h3>
+      <button class="btn-ghost" id="ex-close"><span>Fechar</span></button>
+    </header>
+    <div class="ex-body">
+      <fieldset class="ex-field">
+        <legend>O que exportar</legend>
+        <label><input type="radio" name="ex-scope" value="all"> Projeto inteiro</label>
+        <label><input type="radio" name="ex-scope" value="folder"> Uma pasta
+          <select id="ex-folder" aria-label="Pasta"></select></label>
+        <label><input type="radio" name="ex-scope" value="selection"> Seleção atual</label>
+      </fieldset>
+      <fieldset class="ex-field">
+        <legend>Tipos de arquivo</legend>
+        <div class="ex-inline">
+          <label><input type="checkbox" data-ex-type="image" checked> Imagens</label>
+          <label><input type="checkbox" data-ex-type="video" checked> Vídeos</label>
+          <label><input type="checkbox" data-ex-type="other" checked> Outros</label>
+        </div>
+      </fieldset>
+      <fieldset class="ex-field">
+        <legend>Categoria</legend>
+        <select id="ex-cat" aria-label="Categoria"></select>
+      </fieldset>
+      <fieldset class="ex-field">
+        <legend>Formato</legend>
+        <label><input type="radio" name="ex-format" value="zip" checked> .zip com os arquivos</label>
+        <label><input type="radio" name="ex-format" value="txt"> .txt com a lista da estrutura</label>
+        <label id="ex-meta-row"><input type="checkbox" id="ex-meta" checked> Incluir ícones e categorias (ximmer-metadados.json)</label>
+      </fieldset>
+      <p class="ex-summary" id="ex-summary"></p>
+    </div>
+    <footer class="modal-foot">
+      <button class="btn-ghost" id="ex-cancel"><span>Cancelar</span></button>
+      <button class="btn-primary" id="ex-go"><svg class="ic ic-sm"><use href="#i-download"/></svg><span>Exportar</span></button>
+    </footer>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- ===== Player de vídeo ===== -->
+<div class="player" id="player" hidden>
+  <div class="pl-card" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+    <header class="pl-top">
+      <div class="pl-top-title" id="pl-top-title"></div>
+      <button class="pl-icon-btn" id="pl-reveal" aria-label="Mostrar na árvore" title="Mostrar na árvore"><svg class="ic"><use href="#i-folder"/></svg></button>
+      <a class="pl-icon-btn" id="pl-download" aria-label="Baixar" title="Baixar"><svg class="ic"><use href="#i-download"/></svg></a>
+      <button class="pl-icon-btn" id="pl-close" aria-label="Fechar" title="Fechar (Esc)"><svg class="ic"><use href="#i-x"/></svg></button>
+    </header>
+    <div class="pl-body">
+      <div class="pl-main">
+        <div class="pl-stage" id="pl-stage">
+          <video id="pl-video" playsinline preload="metadata"></video>
+          <div class="pl-flash" id="pl-flash"></div>
+          <div class="pl-spinner" aria-hidden="true"></div>
+          <div class="pl-controls">
+            <div class="pl-progress" id="pl-progress" role="slider" aria-label="Progresso">
+              <div class="pl-buf" id="pl-buf"></div>
+              <div class="pl-played" id="pl-played"></div>
+              <div class="pl-knob" id="pl-knob"></div>
+            </div>
+            <div class="pl-row">
+              <div class="pl-group">
+                <button class="pl-icon-btn" id="pl-prev" aria-label="Anterior"><svg class="ic"><use href="#i-prev"/></svg></button>
+                <button class="pl-icon-btn pl-big" id="pl-play" aria-label="Reproduzir"></button>
+                <button class="pl-icon-btn" id="pl-next" aria-label="Próximo"><svg class="ic"><use href="#i-next"/></svg></button>
+                <div class="pl-vol">
+                  <button class="pl-icon-btn" id="pl-mute" aria-label="Silenciar"></button>
+                  <input type="range" id="pl-volume" class="pl-volume" min="0" max="1" step="0.05" value="1" aria-label="Volume">
+                </div>
+                <span class="pl-time" id="pl-time">0:00 / 0:00</span>
+              </div>
+              <div class="pl-group">
+                <div class="pl-menu-wrap">
+                  <button class="pl-text-btn" id="pl-quality" aria-label="Qualidade">Original</button>
+                  <div class="pl-menu pl-menu-q" id="pl-quality-menu" hidden>
+                    <div class="pl-menu-title">Qualidade</div>
+                    <div id="pl-q-list"></div>
+                    <div class="pl-menu-sep"></div>
+                    <button class="pl-menu-add" id="pl-add-open">+ Adicionar qualidade</button>
+                    <div class="pl-add" id="pl-add-form" hidden>
+                      <label class="pl-field">Resolução
+                        <select id="pl-add-h"></select>
+                      </label>
+                      <label class="pl-field" id="pl-add-custom-wrap" hidden>Altura em px
+                        <input type="number" id="pl-add-custom" min="144" max="8640" placeholder="ex: 1820">
+                      </label>
+                      <label class="pl-field">Arquivo de vídeo
+                        <input type="file" id="pl-add-file" accept="video/*">
+                      </label>
+                      <div class="pl-add-err" id="pl-add-err"></div>
+                      <div class="pl-add-actions">
+                        <button id="pl-add-cancel">Cancelar</button>
+                        <button class="is-primary" id="pl-add-save">Adicionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pl-menu-wrap">
+                  <button class="pl-text-btn" id="pl-speed" aria-label="Velocidade">1x</button>
+                  <div class="pl-menu" id="pl-speed-menu" hidden></div>
+                </div>
+                <button class="pl-icon-btn" id="pl-full" aria-label="Tela cheia"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pl-info">
+          <h2 class="pl-title" id="pl-title"></h2>
+          <p class="pl-meta" id="pl-meta"></p>
+        </div>
+      </div>
+      <aside class="pl-side">
+        <div class="pl-side-head"><span>Vídeos desta lista</span><span id="pl-count"></span></div>
+        <div class="pl-list" id="pl-list"></div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- Cartão de confirmação (dentro da GUI, sem alerta do navegador) -->
+<div class="confirm" id="confirm" hidden>
+  <div class="confirm-card">
+    <p id="confirm-text"></p>
+    <div class="screen-foot">
+      <button class="btn-ghost" id="confirm-cancel"><span>Cancelar</span></button>
+      <button class="btn-primary" id="confirm-ok"><span>OK</span></button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
